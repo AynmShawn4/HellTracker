@@ -4,8 +4,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 
-var hellModel = require('../database/HellTracker.model.js');
-var userModel = require('../database/HellTracker.user.js');
+var hellModel = require('../data/HellTracker.model.js');
+var userModel = require('../data/HellTracker.user.js');
 
 var jsonParser = bodyParser.json();
 
