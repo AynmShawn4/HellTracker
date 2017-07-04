@@ -3,8 +3,8 @@ var router = express.Router();
 var path = require('path');
 var bodyParser = require('body-parser');
 
-var hellModel = require('../data/HellTracker.model.js');
-var userModel = require('../data/HellTracker.user.js');
+var hellModel = require('../data/HellModel.js');
+var userModel = require('../data/UserModel.js');
 
 var jsonParser = bodyParser.json();
 
