@@ -3,23 +3,19 @@ var router = express.Router();
 var path = require('path');
 var bodyParser = require('body-parser');
 
-
 var hellModel = require('../data/HellTracker.model.js');
 var userModel = require('../data/HellTracker.user.js');
 
 var jsonParser = bodyParser.json();
 
 router.get('/',function(req, res){
-
 	res.sendFile(path.join(__dirname, '../../client/HellTracker.html'));
 });
 
 router.get('/Login', function(req, res){
 	res.sendFile(path.join(__dirname, '../../client/HellTracker.html'));
-
 })
 
-//
 router.post('/loginRequest', jsonParser, function(req, res){
 	userModel.find({name: req.body.Name, password: req.body.Password}, 
 				{name: true, password: true, epics: true}, function(err, result){
